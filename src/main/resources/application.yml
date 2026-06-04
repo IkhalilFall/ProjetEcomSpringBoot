@@ -1,0 +1,27 @@
+server:
+  port: 8084
+
+  application:
+    name: ecom-site
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/ecom
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+
+
+logging:
+  level:
+    com.jc_tr.ms_support: DEBUG
+    com.jc_tr.ms_support.communications: DEBUG
+    # Réduit le bloc « CONDITION EVALUATION DELTA » à chaque restart DevTools
+    org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener: WARN
